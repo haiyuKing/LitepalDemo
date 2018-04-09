@@ -28,5 +28,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //Litepal数据库
-    compile 'org.litepal.android:core:1.6.0'
+    compile 'org.litepal.android:core:1.6.1'
 }

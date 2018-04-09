@@ -4,7 +4,6 @@ import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
 import org.litepal.LitePal;
-import org.litepal.tablemanager.Connector;
 
 /**
  * Created by HaiyuKing
@@ -20,6 +19,6 @@ public class MyApplication extends Application{
 		/*=================litepal数据库=====================*/
 		LitePal.initialize(this);
 		//获取到SQLiteDatabase的实例，创建数据库表
-		SQLiteDatabase db = Connector.getDatabase();
+		SQLiteDatabase db = LitePal.getDatabase();
 	}
 }
