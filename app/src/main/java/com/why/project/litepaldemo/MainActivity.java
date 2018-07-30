@@ -14,8 +14,6 @@ import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.litepal.crud.DataSupport.where;
-
 public class MainActivity extends AppCompatActivity {
 
 	private static final String TAG = "MainActivity";
@@ -140,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 					}
 				}
 
-				List<LoginUserModel> findWhereList = where("userid=?","00003").find(LoginUserModel.class);
+				List<LoginUserModel> findWhereList = DataSupport.where("userid=?","00003").find(LoginUserModel.class);
 				if(findWhereList.size() > 0){
 					for(LoginUserModel model : findWhereList){
 						Log.w(TAG,"model.getUserId()" + model.getUserId());
